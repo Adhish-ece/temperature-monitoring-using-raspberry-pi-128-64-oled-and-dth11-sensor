@@ -19,15 +19,13 @@ This project reads temperature data from a **DHT11** sensor and displays it on a
 
 ## 💻 Software Requirements
 
-Install the following Python libraries before running the code:
+Install all dependencies using the provided `requirements.txt` file:
 
 ```
-pip install Adafruit_DHT
-pip install adafruit-circuitpython-ssd1306
-sudo apt-get install python3-pil
+pip install -r requirements.txt
 ```
 
-Additionally, make sure I2C is enabled on your Raspberry Pi:
+Make sure I2C is enabled on your Raspberry Pi:
 
 ```
 sudo raspi-config
@@ -53,7 +51,8 @@ python3 temperature_display.py
 ## 📁 File Structure
 
 ```
-├── temperature_display.py
+├── display.py
+├── requirements.txt
 └── README.md
 ```
 
