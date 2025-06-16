@@ -1,1 +1,3 @@
-# temperature-monitoring-using-raspberry-pi-128-64-oled-and-dth11-sensor
+# 🌡️ Raspberry Pi Temperature Display with DHT11 and OLED
+
+This project provides a simple Python script to read temperature and humidity data from a **DHT11 sensor** and display the current temperature on a **128x64 SSD1306 OLED screen** connected to a Raspberry Pi. ...
