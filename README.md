@@ -3,12 +3,14 @@
 
 This project reads temperature data from a **DHT11** sensor and displays it on a **128x64 OLED** screen using a **Raspberry Pi**. The data is updated every 5 seconds.
 
-## 📷 Project Overview
+## 📥 Clone the Repository
 
-- Reads temperature from a DHT11 sensor connected to GPIO4.
-- Displays the temperature on an SSD1306 OLED via I2C.
-- Uses the Raspberry Pi's I2C and GPIO capabilities.
-- Displays "Sensor Error" if the DHT11 fails to respond.
+First, clone this repository:
+
+```
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
 
 ## 🛠️ Hardware Requirements
 
@@ -17,9 +19,9 @@ This project reads temperature data from a **DHT11** sensor and displays it on a
 - SSD1306 128x64 OLED Display (I2C)
 - Jumper Wires
 
-## 💻 Software Requirements
+## 💻 Software Installation
 
-Install all dependencies using the provided `requirements.txt` file:
+Install all dependencies from the `requirements.txt` file:
 
 ```
 pip install -r requirements.txt
@@ -32,15 +34,12 @@ sudo raspi-config
 # Navigate to: Interface Options > I2C > Enable
 ```
 
-## 🧾 How to Run
+## ▶️ How to Run
 
-1. Connect the DHT11 sensor to GPIO4.
-2. Connect the OLED screen to the I2C pins (SCL to GPIO3, SDA to GPIO2).
-3. Save the script as `temperature_display.py`.
-4. Run the script:
+Execute the script:
 
 ```
-python3 temperature_display.py
+python3 display.py
 ```
 
 ## 🖼️ Output Example
