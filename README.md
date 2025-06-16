@@ -1,85 +1,68 @@
-Raspberry Pi DHT11 Temperature Display on OLED
-This project uses a Raspberry Pi to read temperature data from a DHT11 sensor and display it on an SSD1306 OLED screen.
+```
+# DHT11 Temperature Display on OLED using Raspberry Pi
 
-Features
-Reads temperature from a DHT11 sensor.
+This project reads temperature data from a **DHT11** sensor and displays it on a **128x64 OLED** screen using a **Raspberry Pi**. The data is updated every 5 seconds.
 
-Displays the temperature in Celsius on a 128x64 SSD1306 OLED display.
+## 📷 Project Overview
 
-Refreshes the display every 5 seconds.
+- Reads temperature from a DHT11 sensor connected to GPIO4.
+- Displays the temperature on an SSD1306 OLED via I2C.
+- Uses the Raspberry Pi's I2C and GPIO capabilities.
+- Displays "Sensor Error" if the DHT11 fails to respond.
 
-Handles sensor errors gracefully.
+## 🛠️ Hardware Requirements
 
-Hardware Requirements
-Raspberry Pi (any model with GPIO pins)
+- Raspberry Pi (any model with GPIO support)
+- DHT11 Temperature and Humidity Sensor
+- SSD1306 128x64 OLED Display (I2C)
+- Jumper Wires
 
-DHT11 Temperature and Humidity Sensor
+## 💻 Software Requirements
 
-SSD1306 OLED Display (128x64, I2C)
+Install the following Python libraries before running the code:
 
-Jumper Wires
+```
+pip install Adafruit_DHT
+pip install adafruit-circuitpython-ssd1306
+sudo apt-get install python3-pil
+```
 
-Breadboard (optional)
+Additionally, make sure I2C is enabled on your Raspberry Pi:
 
-Software Requirements
-Raspberry Pi OS (or any Debian-based Linux distribution for Raspberry Pi)
-
-Python 3
-
-Adafruit_DHT Python library
-
-Adafruit-Blinka (for CircuitPython compatibility)
-
-adafruit-circuitpython-ssd1306 Python library
-
-Pillow (PIL) Python library
-
-Installation
-1. Enable I2C
-First, ensure that I2C is enabled on your Raspberry Pi. You can do this using raspi-config:
-
+```
 sudo raspi-config
+# Navigate to: Interface Options > I2C > Enable
+```
 
-Navigate to Interface Options > I2C and enable it.
+## 🧾 How to Run
 
-2. Install Libraries
-Install the necessary Python libraries using pip:
+1. Connect the DHT11 sensor to GPIO4.
+2. Connect the OLED screen to the I2C pins (SCL to GPIO3, SDA to GPIO2).
+3. Save the script as `temperature_display.py`.
+4. Run the script:
 
-sudo pip3 install Adafruit_DHT adafruit-circuitpython-ssd1306 Pillow
-sudo pip3 install adafruit-blinka # Required for CircuitPython compatibility
+```
+python3 temperature_display.py
+```
 
-3. Clone the Repository
-Clone this project to your Raspberry Pi:
+## 🖼️ Output Example
 
-git clone <your-repository-url>
-cd <your-repository-name>
+- OLED will display: `24.0°C` (example temperature).
+- Console will log the same value or print `Sensor Error` if the sensor fails.
 
-(Replace <your-repository-url> and <your-repository-name> with your actual repository details.)
+## 📁 File Structure
 
-Wiring
-Connect the components as follows:
+```
+├── temperature_display.py
+└── README.md
+```
 
-DHT11 Sensor
-DHT11 VCC: To Raspberry Pi 3.3V (Pin 1)
+## 📌 Notes
 
-DHT11 GND: To Raspberry Pi GND (Pin 6 or any GND pin)
+- The font used is `DejaVuSans-Bold.ttf` located at `/usr/share/fonts/truetype/dejavu/`.
+- You can adjust the font size or text position as needed based on your OLED resolution.
 
-DHT11 Data: To Raspberry Pi GPIO4 (Pin 7)
+## 📃 License
 
-SSD1306 OLED Display
-OLED VCC: To Raspberry Pi 3.3V (Pin 1)
-
-OLED GND: To Raspberry Pi GND (Pin 9 or any GND pin)
-
-OLED SCL: To Raspberry Pi SCL (Pin 5)
-
-OLED SDA: To Raspberry Pi SDA (Pin 3)
-
-Usage
-To run the script, navigate to the project directory and execute the Python script:
-
-python3 main.py
-
-(Assuming your main script is named main.py)
-
-The OLED display should start showing the temperature readings. If the sensor cannot be read, it will display "Sensor Error".
+This project is open-source and available under the MIT License.
+```
