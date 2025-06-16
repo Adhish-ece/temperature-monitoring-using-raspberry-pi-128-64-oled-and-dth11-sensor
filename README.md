@@ -8,8 +8,8 @@ This project reads temperature data from a **DHT11** sensor and displays it on a
 First, clone this repository:
 
 ```
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Adhish-ece/temperature-monitoring-using-raspberry-pi-128-64-oled-and-dth11-sensor.git
+cd temperature-monitoring-using-raspberry-pi-128-64-oled-and-dth11-sensor
 ```
 
 ## 🛠️ Hardware Requirements
