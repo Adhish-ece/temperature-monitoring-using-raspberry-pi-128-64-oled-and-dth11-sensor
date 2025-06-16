@@ -1,7 +1,7 @@
 ```
 # DHT11 Temperature Display on OLED using Raspberry Pi
 
-This project reads temperature data from a **DHT11** sensor and displays it on a **128x64 OLED** screen using a **Raspberry Pi**. The data is updated every 5 seconds.
+This project reads temperature data from a **DHT11** sensor and displays it on a 128x64 OLED screen using a Raspberry Pi. The data is updated every 5 seconds.
 
 ## 📥 Clone the Repository
 
@@ -11,6 +11,7 @@ First, clone this repository:
 git clone https://github.com/Adhish-ece/temperature-monitoring-using-raspberry-pi-128-64-oled-and-dth11-sensor.git
 cd temperature-monitoring-using-raspberry-pi-128-64-oled-and-dth11-sensor
 ```
+cd temperature-monitoring-using-raspberry-pi-128-64-oled-and-dth11-sensor
 
 ## 🛠️ Hardware Requirements
 
