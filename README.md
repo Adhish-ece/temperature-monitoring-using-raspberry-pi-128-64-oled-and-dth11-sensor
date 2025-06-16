@@ -61,8 +61,4 @@ python3 temperature_display.py
 
 - The font used is `DejaVuSans-Bold.ttf` located at `/usr/share/fonts/truetype/dejavu/`.
 - You can adjust the font size or text position as needed based on your OLED resolution.
-
-## 📃 License
-
-This project is open-source and available under the MIT License.
 ```
